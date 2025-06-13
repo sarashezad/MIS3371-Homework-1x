@@ -7,12 +7,13 @@ Version: 1.0
 Description: Patient Registration Form for MIS 3371 Homework 1
 -->
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sara’s Medicine - Patient Registration</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
+<meta charset="utf-8"/>
+<title>Sara’s Medicine - Patient Registration</title>
+<link href="style.css" rel="stylesheet"/>
+<script>
         window.onload = function () {
             const today = new Date();
             const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
@@ -21,122 +22,125 @@ Description: Patient Registration Form for MIS 3371 Homework 1
     </script>
 </head>
 <body>
-    <div id="header">
-        <img src="hw1.png" alt="Sara's Medicine Logo" width="150">
-        <div id="dateDisplay" style="float: right; margin-top: 20px;"></div>
-        <h1>Sara’s Medicine</h1>
-    </div>
+<div id="header">
+<img alt="Sara's Medicine Logo" src="hw1.png" width="150"/>
+<div id="dateDisplay" style="float: right; margin-top: 20px;"></div>
+<h1>Sara’s Medicine</h1>
+</div>
+<div id="main">
+<form action="thankyou.html">
+<fieldset>
+<legend><strong>Set up a new profile</strong></legend>
+<table>
+<tr>
+<td>First Name:</td>
+<td><input maxlength="30" name="firstname" type="text"/></td>
+<td>Middle Initial:</td>
+<td><input maxlength="1" name="middleinitial" size="1" type="text"/></td>
+<td>Last Name:</td>
+<td><input maxlength="30" name="lastname" type="text"/></td>
+</tr>
+<tr>
+<td>Date of Birth (MM/DD/YYYY):</td>
+<td><input name="dob" placeholder="MM/DD/YYYY" type="text"/></td>
+</tr>
+<tr>
+<td>Social Security Number:</td>
+<td><input maxlength="11" placeholder="XXX-XX-XXXX" type="password"/></td>
+</tr>
+<tr>
+<td>Address Line 1:</td>
+<td><input maxlength="30" type="text"/></td>
+</tr>
+<tr>
+<td>Address Line 2:</td>
+<td><input maxlength="30" type="text"/></td>
+</tr>
+<tr>
+<td>City:</td>
+<td><input maxlength="30" type="text"/></td>
+<td>State:</td>
+<td>
+<select>
+<option>Select State</option>
+<option>TX</option>
+<option>CA</option>
+<option>NY</option>
+<option>FL</option>
+<option>IL</option>
+</select>
+</td>
+<td>Zip Code:</td>
+<td><input maxlength="10" placeholder="12345" type="text"/></td>
+</tr>
+<tr>
+<td>Email Address:</td>
+<td><input placeholder="name@domain.tld" type="email"/></td>
+</tr>
+<tr>
+<td>Describe Your Current Symptoms:</td>
+<td colspan="3"><textarea cols="50" placeholder="Describe your symptoms here..." rows="3"></textarea></td>
+</tr>
+<tr>
+<td>Current Symptoms:</td>
+<td colspan="3">
+<input type="checkbox"/> Fever
+                            <input checked="" type="checkbox"/> Headache
+                            <input type="checkbox"/> Nausea
+                            <input type="checkbox"/> Vomiting
+                            <input type="checkbox"/> None
+                        </td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input name="gender" type="radio"/> Male
+                            <input name="gender" type="radio"/> Female
+                        </td>
+</tr>
+<tr>
+<td>Pregnant:</td>
+<td><input name="pregnant" type="radio"/> Yes
+                            <input name="pregnant" type="radio"/> No
+                        </td>
+</tr>
+<tr>
+<td>Allergies:</td>
+<td><input name="allergy" type="radio"/> Yes
+                            <input name="allergy" type="radio"/> No
+                        </td>
+</tr>
+<tr>
+<td>Rate Your Health (1-10):</td>
+<td><input max="10" min="1" type="range" value="5"/></td>
+</tr>
+<tr>
+<td>Desired User ID:</td>
+<td><input maxlength="20" type="text"/></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password"/></td>
+<td>Re-enter Password:</td>
+<td><input type="password"/></td>
+</tr>
+<tr>
+<td colspan="4">
+<button type="reset">CLEAR AND START OVER</button>
+<button type="submit">Submit</button>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+</div>
 
-    <div id="main">
-        <form action="thankyou.html">
-            <fieldset>
-                <legend><strong>Set up a new profile</strong></legend>
-                <table>
-                    <tr>
-                        <td>First Name:</td>
-                        <td><input type="text" name="firstname" maxlength="30"></td>
-                        <td>Middle Initial:</td>
-                        <td><input type="text" name="middleinitial" maxlength="1" size="1"></td>
-                        <td>Last Name:</td>
-                        <td><input type="text" name="lastname" maxlength="30"></td>
-                    </tr>
-                    <tr>
-                        <td>Date of Birth (MM/DD/YYYY):</td>
-                        <td><input type="text" name="dob" placeholder="MM/DD/YYYY"></td>
-                    </tr>
-                    <tr>
-                        <td>Social Security Number:</td>
-                        <td><input type="password" maxlength="11" placeholder="XXX-XX-XXXX"></td>
-                    </tr>
-                    <tr>
-                        <td>Address Line 1:</td>
-                        <td><input type="text" maxlength="30"></td>
-                    </tr>
-                    <tr>
-                        <td>Address Line 2:</td>
-                        <td><input type="text" maxlength="30"></td>
-                    </tr>
-                    <tr>
-                        <td>City:</td>
-                        <td><input type="text" maxlength="30"></td>
-                        <td>State:</td>
-                        <td>
-                            <select>
-                                <option>Select State</option>
-                                <option>TX</option>
-                                <option>CA</option>
-                                <option>NY</option>
-                                <option>FL</option>
-                                <option>IL</option>
-                            </select>
-                        </td>
-                        <td>Zip Code:</td>
-                        <td><input type="text" maxlength="10" placeholder="12345"></td>
-                    </tr>
-                    <tr>
-                        <td>Email Address:</td>
-                        <td><input type="email" placeholder="name@domain.tld"></td>
-                    </tr>
-                    <tr>
-                        <td>Describe Your Current Symptoms:</td>
-                        <td colspan="3"><textarea rows="3" cols="50" placeholder="Describe your symptoms here..."></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Current Symptoms:</td>
-                        <td colspan="3">
-                            <input type="checkbox"> Fever
-                            <input type="checkbox" checked> Headache
-                            <input type="checkbox"> Nausea
-                            <input type="checkbox"> Vomiting
-                            <input type="checkbox"> None
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gender:</td>
-                        <td><input type="radio" name="gender"> Male
-                            <input type="radio" name="gender"> Female
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pregnant:</td>
-                        <td><input type="radio" name="pregnant"> Yes
-                            <input type="radio" name="pregnant"> No
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Allergies:</td>
-                        <td><input type="radio" name="allergy"> Yes
-                            <input type="radio" name="allergy"> No
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Rate Your Health (1-10):</td>
-                        <td><input type="range" min="1" max="10" value="5"></td>
-                    </tr>
-                    <tr>
-                        <td>Desired User ID:</td>
-                        <td><input type="text" maxlength="20"></td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td><input type="password"></td>
-                        <td>Re-enter Password:</td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <button type="reset">CLEAR AND START OVER</button>
-                            <button type="submit">Submit</button>
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
-        </form>
-    </div>
+<div id="footer">
+<p class="footer-text">
+        We'R'Docs Medical | PO BOX 18881 | Sugar Land TX 77496 |
+        <button onclick="window.location.href='mailto:support@sarasmedicine.com'" type="button">Contact Us</button>
+</p>
+<p class="footer-text">Website built by Sara Saleem</p>
+</div>
 
-    <div id="footer">
-        <p class="footer-text">We'R'Docs Medical | PO BOX 18881 | Sugar Land TX 77496 | <button>Contact Us</button></p>
-        <p class="footer-text">Website built by Sara Saleem</p>
-    </div>
 </body>
 </html>
